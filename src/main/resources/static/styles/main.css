@@ -1,0 +1,131 @@
+@CHARSET "ISO-8859-1";
+
+table.headerMain {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+table.headerMain tr.headerMainTr td.headerMainTd {
+	font: bold 3em arial, sans-serif;
+	margin: 0px;
+	padding: 0;
+}
+
+table.headerMain tr.loginUserMainTr td.loginUserMainTd {
+	font: bold 1em arial, sans-serif;
+	margin: 10px;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+p.searchTitle {
+	font-weight: bold;
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+
+table.searchDetail {
+	margin: 5px 5px 0 0;
+	text-align: left;
+	width: 100%;
+	border-spacing: 2px;
+} 
+
+table.searchDetail th {
+	background-color: #c9c9e7;
+	text-align: center;	
+}
+
+table.searchDetail tr.detailData td {
+	background-color: #DEEBF5;
+	text-align: right;
+}
+
+table.searchDetail tr.detailData td.center {
+	background-color: #DEEBF5;
+	text-align: center;
+}
+
+table.searchDetail tr.detailData td.right {
+	background-color: #DEEBF5;
+	text-align: right;
+}
+
+table.searchDetail tr.detailData td.left {
+	font-weight: bold;
+	background-color: #DEEBF5;
+	text-align: left;
+}
+
+table.searchDetail tr.detailData td.leftNoBold {
+	background-color: #DEEBF5;
+	text-align: left;
+}
+
+div.errors {
+	color: red;
+	font-weight: bold;
+}
+
+table.searchGroupDetail {
+	margin: 5px 5px 0 0;
+	text-align: left;
+	width: 60%;
+	border-spacing: 2px;
+} 
+
+table.searchGroupDetail th {
+	background-color: #c9c9e7;
+	text-align: center;	
+}
+
+table.searchGroupDetail tr.detailData td {
+	background-color: #DEEBF5;
+	text-align: right;
+}
+
+table.searchGroupDetail tr.detailData td.center {
+	background-color: #DEEBF5;
+	text-align: center;
+}
+
+table.searchGroupDetail tr.detailData td.right {
+	background-color: #DEEBF5;
+	text-align: right;
+}
+
+table.searchGroupDetail tr.detailData td.left {
+	font-weight: bold;
+	background-color: #DEEBF5;
+	text-align: left;
+}
+
+table.searchGroupDetail tr.detailData td.leftNoBold {
+	background-color: #DEEBF5;
+	text-align: left;
+}
+
+.login-table {
+    width: 100%;
+    border-collapse: collapse; /* replaces cellspacing */
+}
+
+.login-table td {
+    padding: 1px; /* replaces cellpadding */
+    border: 0px solid #ddd; /* optional border */
+}
+
+.il-home-table {
+    width: 100%;
+    border-collapse: collapse; /* replaces cellspacing */
+}
+
+.il-home-table td {
+    padding: 10px; /* replaces cellpadding */
+    border: 0px solid #ddd; /* optional border */
+}

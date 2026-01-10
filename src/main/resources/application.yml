@@ -1,0 +1,7 @@
+spring:
+  ai:
+    vertex:
+      project-id: gcp-adk-100270
+      location: us-central1
+    gemini:
+      model: text-bison-001
