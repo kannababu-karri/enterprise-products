@@ -16,7 +16,9 @@ public class ManufacturerService {
 	private static final Logger _LOGGER = LoggerFactory.getLogger(ManufacturerService.class);
 	@Autowired
     private ManufacturerRepository manufacturerRepository;
-
+	/**
+	 * save and update
+	 */
     public Manufacturer saveOrUpdate(Manufacturer manufacturer) throws ServiceException {
     	try {
     		return manufacturerRepository.save(manufacturer);
@@ -68,7 +70,7 @@ public class ManufacturerService {
 			throw new ServiceException("ERROR: Service Exception occured in deleteByManufacturerId."+exp.toString());
 		}
 	}
-	
+
 	public Manufacturer findByMfgName(String mfgName) throws ServiceException {
 		try {
 			return manufacturerRepository

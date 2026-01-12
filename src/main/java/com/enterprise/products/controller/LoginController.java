@@ -1,5 +1,9 @@
 package com.enterprise.products.controller;
 
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,7 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.enterprise.products.entities.KeyValuePair;
 import com.enterprise.products.entities.User;
+import com.enterprise.products.service.KeyValuePairService;
 import com.enterprise.products.service.UserService;
 import com.enterprise.products.utils.StringUtility;
 import com.enterprise.products.utils.Utils;
@@ -16,9 +22,14 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
-
+    
+    private static final Logger _LOGGER = LoggerFactory.getLogger(LoginController.class);
+    
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private KeyValuePairService keyValuePairService;
 
     /**
      * Get login page
@@ -61,7 +72,12 @@ public class LoginController {
 	        User authenticateUser = userService.findByUserNameAndPassword(userName, password);
         	if(authenticateUser != null && authenticateUser.getUserId() > 0) {
 	            session.setAttribute(Utils.getSessionLoginUserIdKey(), authenticateUser);
-	            return "redirect:ilHome";
+	            //Get the keyvalue pait from service KeyValuePairService
+                Optional<KeyValuePair> result =keyValuePairService.getByKey("kanna");
+                _LOGGER.info("KeyValuePair fetched in LoginController: {}", 
+                		result.isPresent() ? result.get().toString() : "Not Found");        
+                        
+                return "redirect:ilHome";
         	} else {
         		model.addAttribute("error", "User not exists in the system. Enter valid User Id and Password.");
         	}

@@ -9,7 +9,7 @@ import com.enterprise.products.utils.ILConstants;
 public class AiOrderQtyClientService {
 
     private final WebClient webClient;
-
+    //This is order qty client service 
     public AiOrderQtyClientService(WebClient.Builder builder) {
         this.webClient = builder
                 .baseUrl(ILConstants.MICROSERVICE_RESTFUL_ORDERQTY_URL)
